@@ -52,12 +52,12 @@ public class Velha {
     public static void JogoDaVelha() {
         Random random = new Random();
         char player1 = 'X', player2 = 'O';
-        int l, c, jogada = 0, jogada2 = 0;
+        int l, c, jogada = 0, jogada2 = 0, cont;
 
         System.out.println();
-        for (int i = 0; i < 9; i++) {
+        for (cont = 0; cont < 9; cont++) {
             do {
-                System.out.println("Iniciando a jogada " + (i + 1) + ":");
+                System.out.println("Iniciando a jogada " + (cont + 1) + ":");
 
                 System.out.print("-> Digite a linha que deseja jogar: ");
                 l = input.nextInt() - 1;
@@ -77,8 +77,8 @@ public class Velha {
             } while (jogada == 0);
             velha[l][c] = player1;
             ImprimeVelha();
+            cont = VerificaGanhador(cont);
 
-            System.out.println("\nJogada do Computador:");
             do {
                 l = random.nextInt(3);
                 c = random.nextInt(3);
@@ -86,12 +86,76 @@ public class Velha {
                     jogada2 = 1;
                 }
             } while (jogada2 == 0);
+            System.out.println("\nJogada do Computador:");
             velha[l][c] = player2;
             ImprimeVelha();
 
             jogada = 0;
             jogada2 = 0;
+
+            cont = VerificaGanhador(cont);
         }
 
+    }
+
+    public static int VerificaGanhador(int cont) {
+        int c = cont;
+
+        if (velha[0][0] == 'X' && velha[0][1] == 'X' && velha[0][2] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[1][0] == 'X' && velha[1][1] == 'X' && velha[1][2] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[2][0] == 'X' && velha[2][1] == 'X' && velha[2][2] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[0][0] == 'X' && velha[1][1] == 'X' && velha[2][2] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[2][0] == 'X' && velha[1][1] == 'X' && velha[2][0] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[0][0] == 'X' && velha[1][0] == 'X' && velha[2][0] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[0][1] == 'X' && velha[1][1] == 'X' && velha[2][1] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[0][2] == 'X' && velha[1][2] == 'X' && velha[2][2] == 'X') {
+            System.out.println("Jogador 1 venceu!");
+            c = 10;
+        } else if (velha[0][0] == 'O' && velha[0][1] == 'O' && velha[0][2] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[1][0] == 'O' && velha[1][1] == 'O' && velha[1][2] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[2][0] == 'O' && velha[2][1] == 'O' && velha[2][2] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][0] == 'O' && velha[1][1] == 'O' && velha[2][2] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][2] == 'O' && velha[1][1] == 'O' && velha[2][0] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][0] == 'O' && velha[1][0] == 'O' && velha[2][0] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][1] == 'O' && velha[1][1] == 'O' && velha[2][1] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][2] == 'O' && velha[1][2] == 'O' && velha[2][2] == 'O') {
+            System.out.println("Jogador 2(PC) venceu!");
+            c = 10;
+        } else if (velha[0][0] != '_' && velha[1][0] != '_' && velha[2][0] != '_' && velha[0][1] != '_'
+                && velha[1][1] != '_' && velha[2][1] != '_' && velha[0][2] != '_' && velha[1][2] != '_'
+                && velha[2][2] != '_') {
+            System.out.println("Deu velha!");
+            c = 10;
+        }
+
+        return c;
     }
 }
