@@ -80,9 +80,9 @@ public class Velha {
 
             System.out.println("\nJogada do Computador:");
             do {
-                l = random.nextInt(1, 3);
-                c = random.nextInt(1, 3);
-                if (velha[(l - 1)][(c - 1)] == 'X') {
+                l = random.nextInt(3);
+                c = random.nextInt(3);
+                if (velha[(l)][(c)] == '_') {
                     jogada2 = 1;
                 }
             } while (jogada2 == 0);
