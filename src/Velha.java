@@ -23,15 +23,27 @@ public class Velha {
 
         InicializaVelha();
         Banner();
+        ImprimeVelha();
 
     }
 
     public static void InicializaVelha() {
         for (int l = 0; l < velha.length; l++) {
             for (int c = 0; c < velha.length; c++) {
-                velha[l][c] = ' ';
+                velha[l][c] = '_';
             }
             System.out.println();
         }
+    }
+
+    public static void ImprimeVelha() {
+        System.out.println("\nTabuleiro inicial:");
+        for (int l = 0; l < velha.length; l++) {
+            for (int c = 0; c < velha.length; c++) {
+                System.out.print("|" + velha[l][c] + "|");
+            }
+            System.out.println();
+        }
+
     }
 }
