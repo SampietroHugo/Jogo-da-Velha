@@ -56,44 +56,49 @@ public class Velha {
 
         System.out.println();
         for (cont = 0; cont < 9; cont++) {
-            do {
-                System.out.println("Iniciando a jogada " + (cont + 1) + ":");
+            if (cont < 9) {
+                do {
+                    System.out.println("Iniciando a jogada " + (cont + 1) + ":");
 
-                System.out.print("-> Digite a linha que deseja jogar: ");
-                l = input.nextInt() - 1;
+                    System.out.print("-> Digite a linha que deseja jogar: ");
+                    l = input.nextInt() - 1;
 
-                System.out.print("-> Digite a coluna que deseja jogar: ");
-                c = input.nextInt() - 1;
+                    System.out.print("-> Digite a coluna que deseja jogar: ");
+                    c = input.nextInt() - 1;
 
-                if (l < 3 && c < 3 && l >= 0 && c >= 0) {
-                    if (velha[l][c] == '_' && velha[l][c] != 'O') {
-                        jogada = 1;
+                    if (l < 3 && c < 3 && l >= 0 && c >= 0) {
+                        if (velha[l][c] == '_' && velha[l][c] != 'O') {
+                            jogada = 1;
+                        }
                     }
-                }
-                if (jogada != 1) {
-                    System.out.println("Sua jogada não foi válida! Jogue novamente.");
-                }
+                    if (jogada != 1) {
+                        System.out.println("Sua jogada não foi válida! Jogue novamente.");
+                    }
 
-            } while (jogada == 0);
-            velha[l][c] = player1;
-            ImprimeVelha();
-            cont = VerificaGanhador(cont);
+                } while (jogada == 0);
 
-            do {
-                l = random.nextInt(3);
-                c = random.nextInt(3);
-                if (velha[(l)][(c)] == '_') {
-                    jogada2 = 1;
-                }
-            } while (jogada2 == 0);
-            System.out.println("\nJogada do Computador:");
-            velha[l][c] = player2;
-            ImprimeVelha();
+                velha[l][c] = player1;
+                ImprimeVelha();
+                cont = VerificaGanhador(cont);
 
+            }
+
+            if (cont < 9) {
+                do {
+                    l = random.nextInt(3);
+                    c = random.nextInt(3);
+                    if (velha[(l)][(c)] == '_') {
+                        jogada2 = 1;
+                    }
+                } while (jogada2 == 0);
+
+                System.out.println("\nJogada do Computador:");
+                velha[l][c] = player2;
+                ImprimeVelha();
+                cont = VerificaGanhador(cont);
+            }
             jogada = 0;
             jogada2 = 0;
-
-            cont = VerificaGanhador(cont);
         }
 
     }
@@ -113,7 +118,7 @@ public class Velha {
         } else if (velha[0][0] == 'X' && velha[1][1] == 'X' && velha[2][2] == 'X') {
             System.out.println("Jogador 1 venceu!");
             c = 10;
-        } else if (velha[2][0] == 'X' && velha[1][1] == 'X' && velha[2][0] == 'X') {
+        } else if (velha[2][0] == 'X' && velha[1][1] == 'X' && velha[0][2] == 'X') {
             System.out.println("Jogador 1 venceu!");
             c = 10;
         } else if (velha[0][0] == 'X' && velha[1][0] == 'X' && velha[2][0] == 'X') {
