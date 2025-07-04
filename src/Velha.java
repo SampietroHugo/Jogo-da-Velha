@@ -67,7 +67,7 @@ public class Velha {
                     c = input.nextInt() - 1;
 
                     if (l < 3 && c < 3 && l >= 0 && c >= 0) {
-                        if (velha[l][c] == '_' && velha[l][c] != 'O') {
+                        if (velha[l][c] == '_') {
                             jogada = 1;
                         }
                     }
@@ -107,57 +107,91 @@ public class Velha {
         int c = cont;
 
         if (velha[0][0] == 'X' && velha[0][1] == 'X' && velha[0][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[1][0] == 'X' && velha[1][1] == 'X' && velha[1][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[2][0] == 'X' && velha[2][1] == 'X' && velha[2][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] == 'X' && velha[1][1] == 'X' && velha[2][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[2][0] == 'X' && velha[1][1] == 'X' && velha[0][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] == 'X' && velha[1][0] == 'X' && velha[2][0] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][1] == 'X' && velha[1][1] == 'X' && velha[2][1] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][2] == 'X' && velha[1][2] == 'X' && velha[2][2] == 'X') {
-            System.out.println("Jogador 1 venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║       --> JOGADOR 1 VENCEU!        ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] == 'O' && velha[0][1] == 'O' && velha[0][2] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[1][0] == 'O' && velha[1][1] == 'O' && velha[1][2] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[2][0] == 'O' && velha[2][1] == 'O' && velha[2][2] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] == 'O' && velha[1][1] == 'O' && velha[2][2] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][2] == 'O' && velha[1][1] == 'O' && velha[2][0] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] == 'O' && velha[1][0] == 'O' && velha[2][0] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][1] == 'O' && velha[1][1] == 'O' && velha[2][1] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!      ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][2] == 'O' && velha[1][2] == 'O' && velha[2][2] == 'O') {
-            System.out.println("Jogador 2(PC) venceu!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║     --> JOGADOR 2 VENCEU(PC)!    ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         } else if (velha[0][0] != '_' && velha[1][0] != '_' && velha[2][0] != '_' && velha[0][1] != '_'
                 && velha[1][1] != '_' && velha[2][1] != '_' && velha[0][2] != '_' && velha[1][2] != '_'
                 && velha[2][2] != '_') {
-            System.out.println("Deu velha!");
+            System.out.println("╔════════════════════════════════════╗");
+            System.out.println("║          --> DEU VELHA!!           ║");
+            System.out.println("╚════════════════════════════════════╝");
             c = 10;
         }
 
